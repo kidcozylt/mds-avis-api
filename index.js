@@ -11,7 +11,7 @@ app.get('/favicon.png', (req, res) => res.status(204).end());
 
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://mds-avis-kbx8823nm-laurendas-projects.vercel.app'
+  'https://mds-avis-api.vercel.app'
 ]
 
 app.use(cors({
