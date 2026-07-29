@@ -1,8 +1,11 @@
 const prisma = require('../lib/prisma');
 const argon2 = require('argon2');
 const jwt = require('jsonwebtoken');
+const cors = require('../lib/cors');
 
 module.exports = async (req, res) => {
+    if (cors(req, res)) return; 
+
     const { email, password } = req.body;
 
     try {

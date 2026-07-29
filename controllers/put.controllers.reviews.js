@@ -1,8 +1,11 @@
 const prisma = require('../lib/prisma');
+const cors = require('../lib/cors');
 
 module.exports = async (req, res) => {
+    if (cors(req, res)) return;
+
     try {
-        const { id } = req.params; // déjà parsé en Int par put.middleware
+        const { id } = req.params;
 
         const review = await prisma.review.findUnique({ where: { id } });
 
