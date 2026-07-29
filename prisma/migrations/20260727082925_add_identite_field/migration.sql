@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Review" ADD COLUMN     "identite" TEXT,
+ALTER COLUMN "date" SET DEFAULT CURRENT_TIMESTAMP;
