@@ -6,6 +6,9 @@ const prisma = require('./lib/prisma')
 
 const app = express()
 
+app.get('/favicon.ico', (req, res) => res.status(204).end());
+app.get('/favicon.png', (req, res) => res.status(204).end());
+
 const allowedOrigins = [
   'http://localhost:3000',
   process.env.FRONTEND_URL 
